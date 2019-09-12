@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div>
+		<h1>Edit Restaurant</h1><hr>
+		<form action="{{ url_for('editRestaurant', rest_id=myRests.id) }}" 
+			  method="POST" class="col-sm-4">
+			<input type="text" 
+				   name="rname" 
+				   class="form-control"
+				   placeholder="Enter Restaurant Name"
+				   value="{{ myRests.name }}" ><br>
+			<input type="submit"
+			       value="Update"
+			       class="btn btn-primary btn-block">
+		</form>
+	</div>
+{% endblock %}
